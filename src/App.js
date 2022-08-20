@@ -2,14 +2,19 @@ import React from 'react';
 import WordCard from './WordCard'
 import './App.css';
 
-const word = "Hello";
+const wordcollect = ["Hello","Gelly","Dollar","Wallet"];
+const randomWord = wordcollect[Math.floor(Math.random()*wordcollect.length)];
+
 function App() {
-    return (
+   function refreshPage() {
+      window.location.reload(false);
+   }
+   return (
    <div>
-   
-       <WordCard value={word}/>
+      <WordCard value={randomWord}/>
+      <button onClick={refreshPage}>Reset</button>
  
- </div>
+   </div>
  );
 }
 export default App;

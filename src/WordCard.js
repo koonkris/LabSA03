@@ -27,6 +27,13 @@ export default function WordCard(props){
             }else{
                 console.log('reset, go next')
                 setState({...state, guess: '', attempt: state.attempt + 1})
+                if(state.attempt == 4){
+                    console.log('thrid character is L')
+                }else{if(state.attempt == 5){
+                    console.log('omae wa mou shindeiru')
+                    setState({...state, guess: '', completed: true})
+                    }
+                }
             }
         }
     }
